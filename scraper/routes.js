@@ -1,5 +1,9 @@
 const express = require("express");
 
+const scrapper = require("./scrapper");
+
+const router = express.Router();
+
 router.get("/all", async (req, res, _) => {
   const {
     name,
@@ -29,10 +33,6 @@ router.get("/all", async (req, res, _) => {
     deathsPerMillion: deathsPerMillion,
   });
 });
-
-const scrapper = require("./scrapper");
-
-const router = express.Router();
 
 router.get("/countries", async (req, res, _) => {
   const countries = await scrapper.getTheCountries(req.query.sort || "name");
