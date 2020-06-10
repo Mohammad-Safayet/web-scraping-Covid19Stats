@@ -1,5 +1,35 @@
 const express = require("express");
 
+router.get("/all", async (req, res, _) => {
+  const {
+    name,
+    cases,
+    newCases,
+    deaths,
+    newDeaths,
+    recovered,
+    newRecovered,
+    activeCases,
+    seriousCases,
+    totalsPerMillion,
+    deathsPerMillion,
+  } = await scrapper.getTheCountries("", true);
+
+  res.status(200).json({
+    name: name,
+    cases: cases,
+    newCases: newCases,
+    deaths: deaths,
+    newDeaths: newDeaths,
+    recovered: recovered,
+    newRecovered: newRecovered,
+    activeCases: activeCases,
+    seriousCases: seriousCases,
+    totalsPerMillion: totalsPerMillion,
+    deathsPerMillion: deathsPerMillion,
+  });
+});
+
 const scrapper = require("./scrapper");
 
 const router = express.Router();
@@ -68,36 +98,6 @@ router.get("/continents/:name", async (req, res, _) => {
       countries: countries,
     });
   }
-});
-
-router.get("/all", async (req, res, _) => {
-  const {
-    name,
-    cases,
-    newCases,
-    deaths,
-    newDeaths,
-    recovered,
-    newRecovered,
-    activeCases,
-    seriousCases,
-    totalsPerMillion,
-    deathsPerMillion,
-  } = await scrapper.getTheCountries("", true);
-
-  res.status(200).json({
-    name: name,
-    cases: cases,
-    newCases: newCases,
-    deaths: deaths,
-    newDeaths: newDeaths,
-    recovered: recovered,
-    newRecovered: newRecovered,
-    activeCases: activeCases,
-    seriousCases: seriousCases,
-    totalsPerMillion: totalsPerMillion,
-    deathsPerMillion: deathsPerMillion,
-  });
 });
 
 module.exports = router;
