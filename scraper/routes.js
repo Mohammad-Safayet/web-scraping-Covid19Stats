@@ -24,7 +24,7 @@ router.get("/countries/:name", async (req, res, _) => {
 
 router.get("/continents", async (req, res, _) => {
   const continents = await scrapper.getTheContinents(req.query.sort || "name");
-  
+
   res.status(200).json({ total: continents.length, continents: continents });
 });
 
@@ -61,6 +61,7 @@ router.get("/continents/:name", async (req, res, _) => {
       deaths: deaths,
       newDeaths: newDeaths,
       recovered: recovered,
+      newRecovered: newRecovered,
       activeCases: activeCases,
       seriousCases: seriousCases,
       totalCountries: countries.length,
@@ -70,9 +71,33 @@ router.get("/continents/:name", async (req, res, _) => {
 });
 
 router.get("/all", async (req, res, _) => {
-  const countries = await scrapper.getTheCountries("", true);
+  const {
+    name,
+    cases,
+    newCases,
+    deaths,
+    newDeaths,
+    recovered,
+    newRecovered,
+    activeCases,
+    seriousCases,
+    totalsPerMillion,
+    deathsPerMillion,
+  } = await scrapper.getTheCountries("", true);
 
-  res.status(200).json({ total: countries.length || 1, countries: countries });
+  res.status(200).json({
+    name: name,
+    cases: cases,
+    newCases: newCases,
+    deaths: deaths,
+    newDeaths: newDeaths,
+    recovered: recovered,
+    newRecovered: newRecovered,
+    activeCases: activeCases,
+    seriousCases: seriousCases,
+    totalsPerMillion: totalsPerMillion,
+    deathsPerMillion: deathsPerMillion,
+  });
 });
 
 module.exports = router;
