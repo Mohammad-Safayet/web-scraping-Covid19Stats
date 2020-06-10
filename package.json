@@ -1,0 +1,19 @@
+{
+  "name": "covidapi",
+  "version": "1.0.0",
+  "description": "An Api to simulate the increase the growth of covid19 pandamic across the world",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "author": "Md. Safayet Latif",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "cheerio": "^1.0.0-rc.3",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.3"
+  }
+}
