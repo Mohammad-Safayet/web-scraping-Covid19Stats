@@ -1,8 +1,10 @@
-# COVID-19 API
+# Web Scraping 9COVID-19 API)
 
 > Serving data from [worldmeter](https://www.worldometers.info/coronavirus/) as a JSON api
 
 ## Routes
+
+    can also be found on [Postman](https://documenter.getpostman.com/view/10967946/SzzefzaP?version=latest)
 
 - /v1/all: global summary
 
@@ -18,9 +20,9 @@
 
 1. Clone
 
-    ```bash
-    git clone https://github.com/Mohammad-Safayet/web-scraping-Covid19Stats
-    ```
+   ```bash
+   git clone https://github.com/Mohammad-Safayet/web-scraping-Covid19Stats
+   ```
 
 2. Install deps (`npm install`)
 
