@@ -1,6 +1,6 @@
 # Web Scraping (COVID-19 API)
 
-> Serving data from [worldmeter](https://www.worldometers.info/coronavirus/) as a JSON api
+> Serving data from [Worldometers](https://www.worldometers.info/coronavirus/) as a JSON api
 
 ## Routes
 
