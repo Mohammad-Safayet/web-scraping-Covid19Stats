@@ -1,3 +1,27 @@
 # COVID-19 API
 
-> Serving data from John Hopkins University CSSE as a [JSON API](https://covid19.mathdro.id)
+> Serving data from [worldmeter](https://www.worldometers.info/coronavirus/) as a JSON api
+
+## Routes
+
+- /v1/all: global summary
+
+- /v1/countries: Returns a JSON array with an element for each country that has stats available
+
+- /v1/continents: Returns a JSON array with an element for each continent that has stats available
+
+- /v1/continents/:query: Returns JSON data for a specific continent that has stats available.
+
+- /v1/conuntries/:query: Returns JSON data for a specific country that has stats available.
+
+## Usage
+
+1. Clone
+
+    ```bash
+    git clone https://github.com/Mohammad-Safayet/web-scraping-Covid19Stats
+    ```
+
+2. Install deps (`npm install`)
+
+3. Start the dev server (`npm start`)
