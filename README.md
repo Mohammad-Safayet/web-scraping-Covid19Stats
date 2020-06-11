@@ -1,4 +1,4 @@
-# Web Scraping 9COVID-19 API)
+# Web Scraping (COVID-19 API)
 
 > Serving data from [worldmeter](https://www.worldometers.info/coronavirus/) as a JSON api
 
