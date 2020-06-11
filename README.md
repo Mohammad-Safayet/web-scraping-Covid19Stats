@@ -4,7 +4,7 @@
 
 ## Routes
 
-    can also be found on [Postman](https://documenter.getpostman.com/view/10967946/SzzefzaP?version=latest)
+can also be found on [Postman](https://documenter.getpostman.com/view/10967946/SzzefzaP?version=latest)
 
 - /v1/all: global summary
 
